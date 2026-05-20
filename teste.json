@@ -1,0 +1,14 @@
+{
+  "provas": {
+    "matematica": "25/05/2026",
+    "fisica": "28/05/2026"
+  },
+
+  "simulados": {
+    "enem": "10/06/2026"
+  },
+
+  "horarios": {
+    "segunda": "Matemática e Física"
+  }
+}
