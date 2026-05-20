@@ -6,7 +6,7 @@ admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
 
     databaseURL:
-    "https://auxescolar-default-rtdb.firebaseio.com"
+        "https://auxescolar-default-rtdb.firebaseio.com"
 });
 
 const db = admin.database();
@@ -24,7 +24,7 @@ app.use(express.json());
 const TOKEN = process.env.TOKEN_TELEGRAM;
 
 const TELEGRAM_API =
-  `https://api.telegram.org/bot${TOKEN}`;
+    `https://api.telegram.org/bot${TOKEN}`;
 
 const groq = new Groq({
     apiKey: process.env.GROQ_API_KEY
@@ -48,45 +48,61 @@ app.post("/webhook", async (req, res) => {
 
         const provasRef = db.ref("provas");
 
-const snapshot = await provasRef.once("value");
+        const dadosRef = db.ref("/");
 
-const provas = snapshot.val();
+        const snapshot = await dadosRef.once("value");
 
-let contextoProvas = "";
+        const dadosEscola = snapshot.val();
 
-for (let materia in provas) {
+        let contextoSistema = "";
 
-    contextoProvas +=
-    `${materia}: ${provas[materia]}\n`;
-}
+        contextoSistema += `
+PROVAS:
+${JSON.stringify(dadosEscola.provas, null, 2)}
 
-const respostaIA =
-await groq.chat.completions.create({
+SIMULADOS:
+${JSON.stringify(dadosEscola.simulados, null, 2)}
 
-    messages: [
+HORÁRIOS:
+${JSON.stringify(dadosEscola.horarios, null, 2)}
 
-        {
-            role: "system",
+AVISOS:
+${JSON.stringify(dadosEscola.avisos, null, 2)}
 
-            content:
-`Você é um assistente virtual escolar.
+PROFESSORES:
+${JSON.stringify(dadosEscola.professores, null, 2)}
+
+DISCIPLINAS:
+${JSON.stringify(dadosEscola.disciplinas, null, 2)}
+`;
+
+        const respostaIA =
+            await groq.chat.completions.create({
+
+                messages: [
+
+                    {
+                        role: "system",
+
+                        content:
+                            `Você é um assistente virtual escolar.
 
 Estas são as datas das provas:
 
-${contextoProvas}
+${contextoSistema}
 
 Responda perguntas escolares
 de forma objetiva e educada.`
-        },
+                    },
 
-        {
-            role: "user",
-            content: textoUsuario
-        }
-    ],
+                    {
+                        role: "user",
+                        content: textoUsuario
+                    }
+                ],
 
-    model: "llama-3.3-70b-versatile"
-});
+                model: "llama-3.3-70b-versatile"
+            });
 
         const resposta =
             respostaIA.choices[0].message.content;

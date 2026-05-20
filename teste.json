@@ -1,14 +1,379 @@
 {
   "provas": {
-    "matematica": "25/05/2026",
-    "fisica": "28/05/2026"
+    "matematica": {
+      "data": "25/05/2026",
+      "horario": "08:00",
+      "professor": "Carlos Henrique",
+      "sala": "Sala 12",
+      "peso": "10 pontos",
+      "conteudos": [
+        "Função do 2º grau",
+        "Logaritmo",
+        "Matriz",
+        "Determinantes",
+        "Probabilidade",
+        "Progressão Aritmética"
+      ]
+    },
+
+    "fisica": {
+      "data": "28/05/2026",
+      "horario": "10:00",
+      "professor": "Fernanda Lima",
+      "sala": "Laboratório 2",
+      "peso": "8 pontos",
+      "conteudos": [
+        "Cinemática",
+        "Leis de Newton",
+        "Energia",
+        "Gravitação",
+        "Termologia",
+        "Ondulatória"
+      ]
+    },
+
+    "quimica": {
+      "data": "30/05/2026",
+      "horario": "09:00",
+      "professor": "Roberto Alves",
+      "sala": "Sala 8",
+      "peso": "9 pontos",
+      "conteudos": [
+        "Ligações químicas",
+        "Mol",
+        "Balanceamento",
+        "Ácidos e bases",
+        "Tabela periódica",
+        "Reações químicas"
+      ]
+    },
+
+    "biologia": {
+      "data": "02/06/2026",
+      "horario": "11:00",
+      "professor": "Patrícia Gomes",
+      "sala": "Sala 15",
+      "peso": "7 pontos",
+      "conteudos": [
+        "Citologia",
+        "Genética",
+        "Ecologia",
+        "Evolução",
+        "Sistema digestório",
+        "Sistema respiratório"
+      ]
+    },
+
+    "historia": {
+      "data": "04/06/2026",
+      "horario": "13:00",
+      "professor": "Ricardo Souza",
+      "sala": "Sala 5",
+      "peso": "6 pontos",
+      "conteudos": [
+        "Revolução Francesa",
+        "Primeira Guerra Mundial",
+        "Segunda Guerra Mundial",
+        "Ditadura Militar",
+        "Brasil Colonial",
+        "Guerra Fria"
+      ]
+    },
+
+    "portugues": {
+      "data": "06/06/2026",
+      "horario": "07:30",
+      "professor": "Juliana Martins",
+      "sala": "Sala 3",
+      "peso": "10 pontos",
+      "conteudos": [
+        "Interpretação textual",
+        "Orações subordinadas",
+        "Concordância verbal",
+        "Redação",
+        "Figuras de linguagem",
+        "Literatura modernista"
+      ]
+    }
   },
 
   "simulados": {
-    "enem": "10/06/2026"
+    "enem": {
+      "data": "10/06/2026",
+      "horario": "13:00",
+      "duracao": "5 horas",
+      "local": "Auditório Principal",
+      "questoes": 180,
+      "redacao": true
+    },
+
+    "vestibular": {
+      "data": "20/06/2026",
+      "horario": "08:00",
+      "duracao": "4 horas",
+      "local": "Bloco B",
+      "questoes": 90,
+      "redacao": true
+    },
+
+    "saeb": {
+      "data": "15/07/2026",
+      "horario": "09:00",
+      "duracao": "3 horas",
+      "local": "Laboratório 1",
+      "questoes": 60,
+      "redacao": false
+    },
+
+    "matematica": {
+      "data": "18/06/2026",
+      "horario": "14:00",
+      "duracao": "2 horas",
+      "local": "Sala 12",
+      "questoes": 30,
+      "redacao": false
+    },
+
+    "linguagens": {
+      "data": "22/06/2026",
+      "horario": "10:00",
+      "duracao": "3 horas",
+      "local": "Sala 6",
+      "questoes": 45,
+      "redacao": true
+    },
+
+    "natureza": {
+      "data": "25/06/2026",
+      "horario": "15:00",
+      "duracao": "3 horas",
+      "local": "Laboratório 2",
+      "questoes": 50,
+      "redacao": false
+    }
   },
 
   "horarios": {
-    "segunda": "Matemática e Física"
+    "segunda": [
+      "Matemática",
+      "Física",
+      "Português",
+      "História",
+      "Redação",
+      "Educação Física"
+    ],
+
+    "terca": [
+      "Química",
+      "Biologia",
+      "História",
+      "Geografia",
+      "Inglês",
+      "Artes"
+    ],
+
+    "quarta": [
+      "Geografia",
+      "Inglês",
+      "Redação",
+      "Matemática",
+      "Projeto Integrador",
+      "Sociologia"
+    ],
+
+    "quinta": [
+      "Português",
+      "Química",
+      "Biologia",
+      "Filosofia",
+      "Física",
+      "Educação Física"
+    ],
+
+    "sexta": [
+      "História",
+      "Matemática",
+      "Geografia",
+      "Inglês",
+      "Artes",
+      "Redação"
+    ],
+
+    "sabado": [
+      "Simulado ENEM",
+      "Revisão de Matemática",
+      "Plantão de Dúvidas",
+      "Laboratório de Redação",
+      "Projeto de Pesquisa",
+      "Aula Extra"
+    ]
+  },
+
+  "avisos": {
+    "1": {
+      "titulo": "Feira de Ciências",
+      "descricao": "A feira acontecerá no auditório principal.",
+      "data": "15/06/2026",
+      "responsavel": "Coordenação",
+      "local": "Auditório",
+      "prioridade": "Alta"
+    },
+
+    "2": {
+      "titulo": "Entrega de atividades",
+      "descricao": "Prazo final das atividades de matemática.",
+      "data": "22/05/2026",
+      "responsavel": "Professor Carlos",
+      "local": "Google Classroom",
+      "prioridade": "Média"
+    },
+
+    "3": {
+      "titulo": "Reunião de pais",
+      "descricao": "Encontro com responsáveis dos alunos.",
+      "data": "12/06/2026",
+      "responsavel": "Direção",
+      "local": "Sala multimídia",
+      "prioridade": "Alta"
+    },
+
+    "4": {
+      "titulo": "Atualização cadastral",
+      "descricao": "Atualização obrigatória dos dados dos alunos.",
+      "data": "05/06/2026",
+      "responsavel": "Secretaria",
+      "local": "Portal do aluno",
+      "prioridade": "Baixa"
+    },
+
+    "5": {
+      "titulo": "Campeonato esportivo",
+      "descricao": "Inscrições abertas para futsal e vôlei.",
+      "data": "18/06/2026",
+      "responsavel": "Educação Física",
+      "local": "Quadra",
+      "prioridade": "Média"
+    },
+
+    "6": {
+      "titulo": "Semana tecnológica",
+      "descricao": "Palestras e oficinas sobre tecnologia.",
+      "data": "30/06/2026",
+      "responsavel": "Coordenação TI",
+      "local": "Laboratório 3",
+      "prioridade": "Alta"
+    }
+  },
+
+  "professores": {
+    "matematica": {
+      "nome": "Carlos Henrique",
+      "email": "carlos@escola.com",
+      "telefone": "(75) 99999-1001",
+      "formacao": "Mestrado em Matemática",
+      "tempoEscola": "8 anos",
+      "sala": "Sala 12"
+    },
+
+    "fisica": {
+      "nome": "Fernanda Lima",
+      "email": "fernanda@escola.com",
+      "telefone": "(75) 99999-1002",
+      "formacao": "Doutorado em Física",
+      "tempoEscola": "5 anos",
+      "sala": "Laboratório 2"
+    },
+
+    "quimica": {
+      "nome": "Roberto Alves",
+      "email": "roberto@escola.com",
+      "telefone": "(75) 99999-1003",
+      "formacao": "Especialização em Química",
+      "tempoEscola": "7 anos",
+      "sala": "Sala 8"
+    },
+
+    "biologia": {
+      "nome": "Patrícia Gomes",
+      "email": "patricia@escola.com",
+      "telefone": "(75) 99999-1004",
+      "formacao": "Mestrado em Biologia",
+      "tempoEscola": "6 anos",
+      "sala": "Sala 15"
+    },
+
+    "historia": {
+      "nome": "Ricardo Souza",
+      "email": "ricardo@escola.com",
+      "telefone": "(75) 99999-1005",
+      "formacao": "Licenciatura em História",
+      "tempoEscola": "10 anos",
+      "sala": "Sala 5"
+    },
+
+    "portugues": {
+      "nome": "Juliana Martins",
+      "email": "juliana@escola.com",
+      "telefone": "(75) 99999-1006",
+      "formacao": "Mestrado em Letras",
+      "tempoEscola": "9 anos",
+      "sala": "Sala 3"
+    }
+  },
+
+  "disciplinas": {
+    "matematica": {
+      "cargaHoraria": "80h",
+      "sala": "Sala 12",
+      "media": 7,
+      "faltasMaximas": 15,
+      "professor": "Carlos Henrique",
+      "periodo": "Matutino"
+    },
+
+    "fisica": {
+      "cargaHoraria": "60h",
+      "sala": "Laboratório 2",
+      "media": 7,
+      "faltasMaximas": 12,
+      "professor": "Fernanda Lima",
+      "periodo": "Matutino"
+    },
+
+    "quimica": {
+      "cargaHoraria": "60h",
+      "sala": "Sala 8",
+      "media": 7,
+      "faltasMaximas": 12,
+      "professor": "Roberto Alves",
+      "periodo": "Vespertino"
+    },
+
+    "biologia": {
+      "cargaHoraria": "70h",
+      "sala": "Sala 15",
+      "media": 6,
+      "faltasMaximas": 14,
+      "professor": "Patrícia Gomes",
+      "periodo": "Matutino"
+    },
+
+    "historia": {
+      "cargaHoraria": "50h",
+      "sala": "Sala 5",
+      "media": 6,
+      "faltasMaximas": 10,
+      "professor": "Ricardo Souza",
+      "periodo": "Noturno"
+    },
+
+    "portugues": {
+      "cargaHoraria": "90h",
+      "sala": "Sala 3",
+      "media": 7,
+      "faltasMaximas": 18,
+      "professor": "Juliana Martins",
+      "periodo": "Integral"
+    }
   }
 }
